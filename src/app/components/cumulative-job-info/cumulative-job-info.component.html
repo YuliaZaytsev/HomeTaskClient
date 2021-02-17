@@ -1,0 +1,28 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Select a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date" formControlName="from">
+          <input matEndDate placeholder="End date" formControlName="to">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+        <mat-error>Date Range is mandatory</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">
+        Change Dates
+      </button>
+    </div>
+  </form>
+
+<google-chart  id="chart"
+               type="ComboChart"
+               dynamicResize="true"
+               title="Cumulative job views vs. prediction"
+               [columns]="columns"
+               [data]="data"
+               [options]="options">
+</google-chart>
+</div>

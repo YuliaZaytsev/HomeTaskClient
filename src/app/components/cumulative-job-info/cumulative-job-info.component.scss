@@ -1,0 +1,23 @@
+#chart {
+  width: 100%;
+  min-height: 400px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  row-gap: 15px;
+  padding-top: 15px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+  column-gap: 15px;
+}
+
+button {
+  height: 59.6px;
+}
